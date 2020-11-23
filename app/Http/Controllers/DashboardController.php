@@ -8,6 +8,7 @@ use App\Models\Request as Marathon;
 class DashboardController extends Controller
 {
     public function loadData(Request $request){
+        // dd("afds");
         $marathons = Marathon::all();
         try{
             $male = count($marathons->groupBy('gender')['Male']);

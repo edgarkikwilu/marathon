@@ -28,9 +28,9 @@ Route::get('dashboard',[DashboardController::class,'loadData'])->name('dashboard
 
 Auth::routes(['register'=>false]);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return route('dashboard.load');
+// })->name('dashboard');
 
 Auth::routes();
 
