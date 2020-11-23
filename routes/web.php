@@ -22,6 +22,16 @@ Route::get('/', function () {
 
 Route::post('submit',[RequestController::class,'store'])->name('submit');
 
-Route::get('dashboard',[DashboardController::class,'loadData'])->name('dashboard.load');
+Route::get('dashboard',[DashboardController::class,'loadData'])->name('dashboard.load')->middleware('auth');
 
 // Route::
+
+Auth::routes(['register'=>false]);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
