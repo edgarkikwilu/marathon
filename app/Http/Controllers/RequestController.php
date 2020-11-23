@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class RequestController extends Controller
 {
+    public function all(Request $request){
+        $marathonRequests = MarathonRequest::all();
+        return view('admin.marathons')->withRequests($marathonRequests);
+    }
+
     public function store(Request $request){
         // dd($request->all());
 
