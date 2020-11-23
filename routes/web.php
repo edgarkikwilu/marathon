@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::post('submit',[RequestController::class,'store'])->name('submit');
+
+Route::get('dashboard',[DashboardController::class,'loadData'])->name('dashboard.load');
+
+// Route::
