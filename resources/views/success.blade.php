@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="col-md-12 justify-content-center">
-            <embed src="{{asset('marathon/images/pay.pdf')}}" style="width: 100%; height:1200px;" />
+            <embed src="{{asset('marathon/images/pay.pdf')}}" style="width: 100vw; height:1200px;" />
         </div>
     </div>
 
