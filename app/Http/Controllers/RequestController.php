@@ -29,6 +29,6 @@ class RequestController extends Controller
         $marathonRequest->emergency = $request->emergency;
         $marathonRequest->save();
 
-        return redirect()->route('home')->with('status','Form submitted successfully');
+        return redirect()->route('success');
     }   
 }

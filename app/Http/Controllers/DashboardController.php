@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     public function loadData(Request $request){
         // dd("afds");
-        $marathons = Marathon::all();
+        $marathons = Marathon::paginate(30);
         try{
             $male = count($marathons->groupBy('gender')['Male']);
         }catch(\Exception $ex){
@@ -22,8 +22,10 @@ class DashboardController extends Controller
             $female = 0;
         }
 
+        $total = Marathon::count();
+
         // dd(count($marathons->groupBy('gender')['Female']));
 
-        return view("dashboard")->withMarathons($marathons)->withMale($male)->withFemale($female);
+        return view("dashboard")->withMarathons($marathons)->withMale($male)->withFemale($female)->withTotal($total);
     }
 }
