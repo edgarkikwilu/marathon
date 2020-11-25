@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row mt-5" style="padding-top: 70px;">
             <div class="col-md-12 text-center">
                 <h3>THANK YOU! YOU HAVE REGISTERED SUCCESSFUL</h3>
             </div>
@@ -17,8 +17,19 @@
                 <h5>Next steps & what to expect:</h5>
             </div>
         </div>
-        <div class="col-md-12 justify-content-center">
-            <embed src="{{asset('marathon/images/pay.pdf')}}" style="width: 100vw; height:1200px;" />
+        <div class="col-md-12 justify-content-center pt-5">
+            {{-- <embed src="{{asset('marathon/images/pay.pdf')}}" style="width: 100vw; height:1200px;" /> --}}
+            <img src="{{asset('marathon/images/s.png')}}" alt="" style="width: 100%;height:100%;">
+        </div>
+        <hr>
+        <div class="col-md-12 justify-content-center pt-5">
+            {{-- <embed src="{{asset('marathon/images/pay.pdf')}}" style="width: 100vw; height:1200px;" /> --}}
+            <img src="{{asset('marathon/images/e.png')}}" alt="" style="width: 100%;height:100%;">
+        </div>
+        <hr>
+        <div class="col-md-12 justify-content-center pt-5">
+            {{-- <embed src="{{asset('marathon/images/pay.pdf')}}" style="width: 100vw; height:1200px;" /> --}}
+            <img src="{{asset('marathon/images/l.png')}}" alt="" style="width: 100%;height:100%;">
         </div>
     </div>
 
