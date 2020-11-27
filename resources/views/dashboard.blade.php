@@ -96,9 +96,11 @@
                     <td>{{$m->created_at}}</td>
                 </tr>
             @endforeach
-            {{$marathons->links()}}
         </tbody>
         </table>
+        <div class="pagination" style="font-size: 12px">
+            {{$marathons->links()}}
+        </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     public function loadData(Request $request){
         // dd("afds");
-        $marathons = Marathon::paginate(30);
+        $marathons = Marathon::paginate(5);
         try{
             $male = count($marathons->groupBy('gender')['Male']);
         }catch(\Exception $ex){
