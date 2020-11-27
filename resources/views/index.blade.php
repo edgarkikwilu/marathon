@@ -169,7 +169,7 @@
                                 <select name="race_category" id="" class="form-control" required>
                                     <option value="" disabled selected>Choose Race Category</option>
                                     <option value="5Km - 20000 TZS">5Km - 20000 TZS</option>
-                                    <option value="10Km - 20000 TZS">10Km - 20000 TZS</option>
+                                    {{-- <option value="10Km - 20000 TZS">10Km - 20000 TZS</option> --}}
                                     <option value="21Km - 20000 TZS">21Km - 20000 TZS</option>
                                     <option value="Child Race - 10000 TZS">Child Race - 10000 TZS</option>
                                 </select>
