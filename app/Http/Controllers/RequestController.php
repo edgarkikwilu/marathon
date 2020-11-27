@@ -16,9 +16,9 @@ class RequestController extends Controller
     public function store(Request $request){
         // dd($request->all());
 
-        $exists =  MarathonRequest::where('mobile',$request->mobile)->get()->first();
+        // $exists =  MarathonRequest::where('mobile',$request->mobile)->get()->first();
 
-        if(!$exists){
+        // if(!$exists){
             $marathonRequest = new MarathonRequest();
             $marathonRequest->full_name = $request->fullname;
             $marathonRequest->nationality = $request->nationality;
@@ -31,7 +31,7 @@ class RequestController extends Controller
             $marathonRequest->team_name = $request->team_name;
             $marathonRequest->emergency = $request->emergency;
             $marathonRequest->save();
-        }
+        // }
 
         return redirect()->route('success');
     }   
